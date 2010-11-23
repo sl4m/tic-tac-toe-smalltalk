@@ -1,4 +1,8 @@
 Object subclass: Board [
+  noWinner [
+    ^' '
+  ]
+
   winningPatterns [
     self subclassResponsibility
   ]
