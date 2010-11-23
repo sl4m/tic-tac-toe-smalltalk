@@ -1,0 +1,15 @@
+<package>
+  <name>TicTacToe-Core</name>
+  <namespace>TicTacToe.Core</namespace>
+  <test>
+    <sunit> TicTacToe.Core.TicTacToeTestCase*</sunit>
+    <filein>TicTacToeTest.st</filein>
+    <filein>BoardTest.st</filein>
+    <filein>ConsoleTest.st</filein>
+  </test>
+  <filein>Board.st</filein>
+  <file>Board.st</file>
+  <file>TicTacToeTest.st</file>
+  <file>BoardTest.st</file>
+  <file>ConsoleTest.st</file>
+</package>

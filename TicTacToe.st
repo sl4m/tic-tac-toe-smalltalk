@@ -1,0 +1,2 @@
+PackageLoader fileInPackage: 'TicTacToe-Core'.
+
