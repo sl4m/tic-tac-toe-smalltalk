@@ -9,13 +9,15 @@ TicTacToeTestCase subclass: BoardTestCase [
   testWinningPatternsSize [
     self assert: (board winningPatterns size == 8).
     board winningPatterns do: [ :pattern |
-      self assert: (pattern size == 3)
+      self assert: (pattern size = 3)
     ].
   ]
 
   testWinningPatterns [
-    1 to: expectedWinningPatterns size do: [ :index |
-      self assert: (self thisArray: (expectedWinningPatterns at: index) equalsTo: (board winningPatterns at: index)). 
-    ].
+    self assert: expectedWinningPatterns = board winningPatterns.
+  ]
+
+  testDefaultBoardSize [
+    "self assert: (board size = 9)"
   ]
 ]
