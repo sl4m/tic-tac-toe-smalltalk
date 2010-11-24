@@ -1,6 +1,10 @@
 Object subclass: Board [
-  noWinner [
+  emptySquare [
     ^' '
+  ]
+
+  noWinner [
+    ^self emptySquare
   ]
 
   winningPatterns [

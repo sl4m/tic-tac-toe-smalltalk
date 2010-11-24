@@ -3,7 +3,7 @@ TicTacToeTestCase subclass: ThreeByThreeTestCase [
 
   setUp [
     board := ThreeByThree new.
-    expectedWinningPatterns := #((0 1 2) (3 4 5) (6 7 8) (0 3 6) (1 4 7) (2 5 8) (0 4 8) (2 4 6)).
+    expectedWinningPatterns := #((1 2 3) (4 5 6) (7 8 9) (1 4 7) (2 5 8) (3 6 9) (1 5 9) (3 5 7)).
   ]
 
   testWinningPatternsSize [
@@ -35,6 +35,31 @@ TicTacToeTestCase subclass: ThreeByThreeTestCase [
     board := ThreeByThree create: existingBoard.
     self assert: (board ~= nil).
     self assert: (board size = 9).
-    self assert: (board list asString = 'XOXOXOOOX')
+    self assert: (board list asString = 'XOXOXOOOX').
+  ]
+
+  testMovingPieceOnBoard [
+    board move: 1 piece: $X.
+    self assert: (board isOccupied: 1).
+  ]
+
+  testDoesNotMovePieceOnOccupiedSquare [
+    board move: 1 piece: $O.
+    board move: 1 piece: $X.
+    self assert: ((board pieceIn: 1) = $O).
+  ]
+
+  testDrawGame [
+    board move: 1 piece: $X.
+    board move: 2 piece: $O.
+    board move: 3 piece: $X.
+    board move: 4 piece: $O.
+    board move: 5 piece: $O.
+    board move: 6 piece: $X.
+    board move: 7 piece: $X.
+    board move: 8 piece: $X.
+    board move: 9 piece: $O.
+    self assert: (board noWinner = board winner).
+    self assert: (board isGameOver).
   ]
 ]
