@@ -1,2 +1,5 @@
 TicTacToeTestCase subclass: HumanTestCase [
+  testMakeMove [
+    
+  ]
 ]
