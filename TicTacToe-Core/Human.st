@@ -1,0 +1,5 @@
+Player subclass: Human [
+  makeMove [
+  
+  ]  
+]

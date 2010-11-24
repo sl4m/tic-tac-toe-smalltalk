@@ -2,9 +2,17 @@ Board subclass: FakeBoard [
 ]
 
 TicTacToeTestCase subclass: BoardTestCase [
-  testNoWinner [
-    | board |
+  | board |
+
+  setUp [
     board := FakeBoard new.
+  ]
+
+  testEmptySquare [
+    self assert: board emptySquare = ' '
+  ]
+
+  testNoWinner [
     self assert: board noWinner = ' '
   ]
 ]

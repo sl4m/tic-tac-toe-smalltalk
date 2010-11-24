@@ -1,0 +1,5 @@
+Player subclass: Negamax [
+  makeMove [
+  
+  ]
+]

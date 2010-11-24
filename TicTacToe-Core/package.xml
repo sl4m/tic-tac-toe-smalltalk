@@ -7,31 +7,31 @@
     <filein>BoardTest.st</filein>
     <filein>ConsoleTest.st</filein>
     <filein>GameTest.st</filein>
+    <filein>PlayerTest.st</filein>
     <filein>HumanTest.st</filein>
     <filein>NegamaxTest.st</filein>
-    <filein>PlayerTest.st</filein>
     <filein>ThreeByThreeTest.st</filein>
   </test>
   <filein>Board.st</filein>
   <filein>Console.st</filein>
   <filein>Game.st</filein>
+  <filein>Player.st</filein>
   <filein>Human.st</filein>
   <filein>Negamax.st</filein>
-  <filein>Player.st</filein>
   <filein>ThreeByThree.st</filein>
   <file>Board.st</file>
   <file>Console.st</file>
   <file>Game.st</file>
+  <file>Player.st</file>
   <file>Human.st</file>
   <file>Negamax.st</file>
-  <file>Player.st</file>
   <file>ThreeByThree.st</file>
   <file>TicTacToeTest.st</file>
   <file>BoardTest.st</file>
   <file>ConsoleTest.st</file>
   <file>GameTest.st</file>
+  <file>PlayerTest.st</file>
   <file>HumanTest.st</file>
   <file>NegamaxTest.st</file>
-  <file>PlayerTest.st</file>
   <file>ThreeByThreeTest.st</file>
 </package>
