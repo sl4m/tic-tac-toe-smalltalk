@@ -9,7 +9,7 @@ TicTacToeTestCase subclass: ThreeByThreeTestCase [
   testWinningPatternsSize [
     self assert: (board winningPatterns size == 8).
     board winningPatterns do: [ :pattern |
-      self assert: (pattern size = 3)
+      self assert: (pattern size = 3).
     ].
   ]
 
@@ -18,15 +18,23 @@ TicTacToeTestCase subclass: ThreeByThreeTestCase [
   ]
 
   testDefaultBoardSize [
-    self assert: (board size = 9)
+    self assert: (board size = 9).
   ]
 
   testRowSize [
-    self assert: (board rowSize = 3)
+    self assert: (board rowSize = 3).
   ]
 
   testList [
-    self assert: (board list = {' ' . ' ' . ' ' . ' ' . ' ' . ' ' . ' ' . ' ' . ' '})
+    self assert: (board list = {' ' . ' ' . ' ' . ' ' . ' ' . ' ' . ' ' . ' ' . ' '}).
   ]
 
+  testCreateBoard [
+    | board existingBoard |
+    existingBoard := {$X . $O . $X . $O . $X . $O . $O . $O . $X}.
+    board := ThreeByThree create: existingBoard.
+    self assert: (board ~= nil).
+    self assert: (board size = 9).
+    self assert: (board list asString = 'XOXOXOOOX')
+  ]
 ]
