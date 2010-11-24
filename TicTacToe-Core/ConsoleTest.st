@@ -1,31 +1,3 @@
-Object subclass: FakeStdIn [
-  | nextLine |
-
-  nextLine [
-    ^nextLine
-  ]
-
-  nextLine: input [
-    nextLine := input.
-  ]
-]
-
-Object subclass: FakeStdOut [
-  | message |
-
-  message [
-    ^message
-  ]
-
-  cr []
-  
-  show: newMessage [
-    (message isNil)
-      ifTrue: [message := ''].
-    message := message, newMessage.
-  ]
-]
-
 TicTacToeTestCase subclass: ConsoleTestCase [
   | console fakeStdIn fakeStdOut |
   setUp [
@@ -56,6 +28,7 @@ TicTacToeTestCase subclass: ConsoleTestCase [
     move := '4'.
     fakeStdIn nextLine: move.
     self assert: ((console humanPlayerMove: $X) = move asInteger).
+    self assert: (fakeStdOut message = 'Enter your move, player X').
   ]
 
   testTryAgainInputFromUser [

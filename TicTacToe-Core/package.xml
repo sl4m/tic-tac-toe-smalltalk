@@ -12,6 +12,8 @@
     <filein>NegamaxTest.st</filein>
     <filein>ThreeByThreeTest.st</filein>
   </test>
+  <filein>FakeStdIn.st</filein>
+  <filein>FakeStdOut.st</filein>
   <filein>Board.st</filein>
   <filein>Console.st</filein>
   <filein>Game.st</filein>
@@ -19,6 +21,8 @@
   <filein>Human.st</filein>
   <filein>Negamax.st</filein>
   <filein>ThreeByThree.st</filein>
+  <file>FakeStdIn.st</file>
+  <file>FakeStdOut.st</file>
   <file>Board.st</file>
   <file>Console.st</file>
   <file>Game.st</file>
