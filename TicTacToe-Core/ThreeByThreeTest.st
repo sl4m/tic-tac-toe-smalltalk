@@ -31,7 +31,7 @@ TicTacToeTestCase subclass: ThreeByThreeTestCase [
 
   testCreateBoard [
     | board existingBoard |
-    existingBoard := {$X . $O . $X . $O . $X . $O . $O . $O . $X}.
+    existingBoard := {'X' . 'O' . 'X' . 'O' . 'X' . 'O' . 'O' . 'O' . 'X'}.
     board := ThreeByThree create: existingBoard.
     self assert: (board ~= nil).
     self assert: (board size = 9).
@@ -39,35 +39,35 @@ TicTacToeTestCase subclass: ThreeByThreeTestCase [
   ]
 
   testMovingPieceOnBoard [
-    board move: 1 piece: $X.
+    board move: 1 piece: 'X'.
     self assert: (board isOccupied: 1).
   ]
 
   testDoesNotMovePieceOnOccupiedSquare [
-    board move: 1 piece: $O.
-    board move: 1 piece: $X.
-    self assert: ((board pieceIn: 1) = $O).
+    board move: 1 piece: 'O'.
+    board move: 1 piece: 'X'.
+    self assert: ((board pieceIn: 1) = 'O').
   ]
 
   testDrawGame [
-    board move: 1 piece: $X.
-    board move: 2 piece: $O.
-    board move: 3 piece: $X.
-    board move: 4 piece: $O.
-    board move: 5 piece: $O.
-    board move: 6 piece: $X.
-    board move: 7 piece: $X.
-    board move: 8 piece: $X.
-    board move: 9 piece: $O.
+    board move: 1 piece: 'X'.
+    board move: 2 piece: 'O'.
+    board move: 3 piece: 'X'.
+    board move: 4 piece: 'O'.
+    board move: 5 piece: 'O'.
+    board move: 6 piece: 'X'.
+    board move: 7 piece: 'X'.
+    board move: 8 piece: 'X'.
+    board move: 9 piece: 'O'.
     self assert: (board winner = board noWinner).
     self assert: (board isGameOver).
   ]
 
   testWinningGame [
-    board move: 1 piece: $X.
-    board move: 2 piece: $X.
-    board move: 3 piece: $X.
-    self assert: (board winner = $X).
+    board move: 1 piece: 'X'.
+    board move: 2 piece: 'X'.
+    board move: 3 piece: 'X'.
+    self assert: (board winner = 'X').
     self assert: (board isGameOver).
   ]
 
@@ -83,30 +83,30 @@ TicTacToeTestCase subclass: ThreeByThreeTestCase [
   ]
 
   testPieceIn [
-    board move: 1 piece: $X.
-    board move: 2 piece: $O.
-    self assert: ((board pieceIn: 1) = $X).
-    self assert: ((board pieceIn: 2) = $O).
+    board move: 1 piece: 'X'.
+    board move: 2 piece: 'O'.
+    self assert: ((board pieceIn: 1) = 'X').
+    self assert: ((board pieceIn: 2) = 'O').
     self assert: ((board pieceIn: 3) = board emptySquare).
   ]
 
   testEmptySquares [
     self assert: (board emptySquares size = 9).
-    board move: 1 piece: $X.
+    board move: 1 piece: 'X'.
     self assert: (board emptySquares size = 8).
   ]
 
   testClearMove [
-    board move: 1 piece: $X.
+    board move: 1 piece: 'X'.
     board clear: 1.
     self assert: ((board isOccupied: 1) not).
     self assert: (board listAsString = '         ').
   ]
 
   testNumberOfMovesMade [
-    board move: 1 piece: $O.
-    board move: 2 piece: $X.
-    board move: 3 piece: $O.
+    board move: 1 piece: 'O'.
+    board move: 2 piece: 'X'.
+    board move: 3 piece: 'O'.
     self assert: (board movesMade = 3).
   ]
 ]

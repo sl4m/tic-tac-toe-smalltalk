@@ -19,7 +19,7 @@ TicTacToeTestCase subclass: ConsoleTestCase [
     | human |
     human := 'h'.
     fakeStdIn nextLine: human.
-    self assert: ((console playerType: $X) = human).
+    self assert: ((console playerType: 'X') = human).
     self assert: (fakeStdOut message = 'Choose player type for X (enter ''h'' for human or ''u'' for unbeatable cpu) ')
   ]
 
@@ -27,7 +27,7 @@ TicTacToeTestCase subclass: ConsoleTestCase [
     | move |
     move := '4'.
     fakeStdIn nextLine: move.
-    self assert: ((console humanPlayerMove: $X) = move asInteger).
+    self assert: ((console humanPlayerMove: 'X') = move asInteger).
     self assert: (fakeStdOut message = 'Enter your move, player X').
   ]
 
@@ -40,7 +40,7 @@ TicTacToeTestCase subclass: ConsoleTestCase [
 
   testDisplayBoardLayout [
     | list board bar space vSpace expectedBoardLayout |
-    list := Array new: 9 withAll: $O.
+    list := Array new: 9 withAll: 'O'.
     board := ThreeByThree create: list.
     console displayBoard: board list.
     bar := '---+---+---'.
@@ -53,12 +53,12 @@ TicTacToeTestCase subclass: ConsoleTestCase [
   ]
 
   testNegamaxMoveMessage [
-    console displayNegamaxMoveMessage: $O.
+    console displayNegamaxMoveMessage: 'O'.
     self assert: (fakeStdOut message = 'Player ''O'' is making a move').
   ]
 
   testDisplayWinner [
-    console displayWinner: $X.
+    console displayWinner: 'X'.
     self assert: (fakeStdOut message = 'The winner is X!!!').
   ]
 

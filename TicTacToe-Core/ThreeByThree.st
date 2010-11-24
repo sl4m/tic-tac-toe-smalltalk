@@ -15,9 +15,9 @@ Board subclass: ThreeByThree [
   ]
 
   findPattern: pattern [
-    ((list at: (pattern at: 1)) = $X & (list at: (pattern at: 2)) = $X & (list at: (pattern at: 3)) = $X)
-      ifTrue: [winner := $X].
-    ((list at: (pattern at: 1)) = $O & (list at: (pattern at: 2)) = $O & (list at: (pattern at: 3)) = $O)
-      ifTrue: [winner := $O].
+    ((list at: (pattern at: 1)) = 'X' & (list at: (pattern at: 2)) = 'X' & (list at: (pattern at: 3)) = 'X')
+      ifTrue: [winner := 'X'].
+    ((list at: (pattern at: 1)) = 'O' & (list at: (pattern at: 2)) = 'O' & (list at: (pattern at: 3)) = 'O')
+      ifTrue: [winner := 'O'].
   ]
 ]

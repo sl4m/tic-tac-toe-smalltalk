@@ -8,7 +8,7 @@ TicTacToeTestCase subclass: HumanTestCase [
     console stdOutput: FakeStdOut new.
     fakeStdIn nextLine: move.
     human := Human new.
-    human piece: $X.
+    human piece: 'X'.
     human ui: console.
     self assert: ((human makeMove) = (move asInteger)).
   ]
