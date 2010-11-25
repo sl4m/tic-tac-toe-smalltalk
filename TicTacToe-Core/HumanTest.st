@@ -1,4 +1,4 @@
-TicTacToeTestCase subclass: HumanTestCase [
+TTTTestCase subclass: HumanTestCase [
   testMakeMove [
     | move fakeStdIn console human |
     move := '4'.

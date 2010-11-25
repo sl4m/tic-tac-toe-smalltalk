@@ -1,4 +1,4 @@
-TicTacToeTestCase subclass: NegamaxTestCase [
+TTTTestCase subclass: NegamaxTestCase [
   | board player console fakeStdIn fakeStdOut |
 
   setUp [

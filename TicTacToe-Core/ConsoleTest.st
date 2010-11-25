@@ -1,4 +1,4 @@
-TicTacToeTestCase subclass: ConsoleTestCase [
+TTTTestCase subclass: ConsoleTestCase [
   | console fakeStdIn fakeStdOut |
   setUp [
     fakeStdIn := FakeStdIn new.

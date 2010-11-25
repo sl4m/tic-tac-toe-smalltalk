@@ -1,4 +1,4 @@
-TicTacToeTestCase subclass: PlayerTestCase [
+TTTTestCase subclass: PlayerTestCase [
   testCreateHumanPlayer [
     | player |
     player := Player create: 'Human' piece: 'X'.

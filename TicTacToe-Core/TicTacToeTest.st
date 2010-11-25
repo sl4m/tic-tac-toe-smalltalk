@@ -1,2 +1,2 @@
-TestCase subclass: TicTacToeTestCase [
+TTTTestCase subclass: TicTacToeTestCase [
 ]
