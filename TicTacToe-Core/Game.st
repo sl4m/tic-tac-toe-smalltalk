@@ -77,7 +77,7 @@ Object subclass: Game [
       whileFalse: [
         self makeMove: self currentPlayer.
       ].
-      self endOfPlay.
+    self endOfPlay.
   ]
 
   endOfPlay [

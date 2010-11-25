@@ -64,4 +64,48 @@ TicTacToeTestCase subclass: GameTestCase [
     game makeMove: human.
     self assert: ((game currentPlayer) = negamax).
   ]
+
+  testDisplayEndMessageWhenSomeoneIsWinner [
+    board move: 1 piece: 'O'.
+    board move: 2 piece: 'O'.
+    board move: 3 piece: 'O'.
+
+    game displayEndMessage.
+    self assert: ((fakeStdOut message) = 'The winner is O!!!').
+  ]
+
+  testDisplayEndMessageWhenGameIsDraw [
+    game displayEndMessage.
+    self assert: ((fakeStdOut message) = 'The game is a draw.').
+  ]
+
+  testEndOfPlayWhenSomeoneIsWinner [
+    board move: 1 piece: 'X'.
+    board move: 2 piece: 'X'.
+    board move: 3 piece: 'X'.
+
+    game endOfPlay.
+    self assert: ((fakeStdOut message) = 'The winner is X!!!Do you want to play again? (''y'' or ''n'') ').
+  ]
+
+  testEndOfPlayWhenGameIsDraw [
+    game endOfPlay.
+    self assert: ((fakeStdOut message) = 'The game is a draw.Do you want to play again? (''y'' or ''n'') ')
+  ]
+
+  testPlayOnLastMove [
+    board move: 1 piece: 'X'.
+    board move: 2 piece: 'O'.
+    board move: 3 piece: 'X'.
+    board move: 4 piece: 'O'.
+    board move: 5 piece: 'O'.
+    board move: 6 piece: 'X'.
+    board move: 7 piece: 'X'.
+    board move: 9 piece: 'O'.
+
+    fakeStdIn nextLine: '8'.
+    game play.
+    self assert: (board isGameOver).
+    self assert: ((board winner) = (board noWinner)).
+  ]
 ]
