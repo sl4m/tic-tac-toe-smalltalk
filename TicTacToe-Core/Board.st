@@ -64,7 +64,7 @@ Object subclass: Board [
   ]
 
   isValidMove: square [
-    ^((1 <= square) & (square <= list size) and: [(self isOccupied: square) not])
+    ^((square between: 1 and: list size) and: [(self isOccupied: square) not])
   ]
 
   winner [
