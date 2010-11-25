@@ -70,13 +70,13 @@ Player subclass: Negamax [
   ]
 
   bestRandomMove [
-    | bestScores randomIndex |
-    bestScores := self bestScores.
-    randomIndex := (((bestScores size - 1) * (Random new next)) + 1) asInteger.
-    ^bestScores at: randomIndex
+    | bestMoves randomIndex |
+    bestMoves := self bestMoves.
+    randomIndex := (((bestMoves size - 1) * (Random new next)) + 1) asInteger.
+    ^bestMoves at: randomIndex
   ]
 
-  bestScores [
+  bestMoves [
     | max indexes counter |
     max := self highestScore.
     indexes := Array new: (self highestScoreCount).

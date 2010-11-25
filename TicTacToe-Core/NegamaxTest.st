@@ -112,11 +112,11 @@ TicTacToeTestCase subclass: NegamaxTestCase [
     self assert: (player highestScoreCount = 3).
   ]
 
-  testBestScores [
+  testBestMoves [
     | scores |
     scores := {2 . 1 . 0 . 1 . 2 . 1 . 2 . 0 . 1}.    
     player scores: scores.
-    self assert: (player bestScores = #(1 5 7)).
+    self assert: (player bestMoves = #(1 5 7)).
   ]
 
   testBestRandomMove [
@@ -136,7 +136,7 @@ TicTacToeTestCase subclass: NegamaxTestCase [
     board move: 4 piece: 'X'.
 
     player makeMove.
-    self assert: (#(5 9) = player bestScores).
+    self assert: (#(5 9) = player bestMoves).
   ]
 
   testMaxMakesWinningMoveScenario2 [
@@ -197,6 +197,6 @@ TicTacToeTestCase subclass: NegamaxTestCase [
     board move: 9 piece: 'X'.
 
     player makeMove.
-    self assert: (#(3 7) = player bestScores).
+    self assert: (#(3 7) = player bestMoves).
   ]
 ]
