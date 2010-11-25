@@ -109,4 +109,33 @@ TicTacToeTestCase subclass: ThreeByThreeTestCase [
     board move: 3 piece: 'O'.
     self assert: (board movesMade = 3).
   ]
+
+  testFindPatternForO [
+    board move: 1 piece: 'O'.
+    board move: 2 piece: 'O'.
+    board move: 3 piece: 'O'.
+    board findPattern: #(1 2 3).
+    self assert: ((board winner) = 'O').
+  ]
+
+  testFindPatternForX [
+    board move: 1 piece: 'X'.
+    board move: 5 piece: 'X'.
+    board move: 9 piece: 'X'.
+    board findPattern: #(1 5 9).
+    self assert: ((board winner) = 'X').
+  ]
+
+  testFindPatternForEmptyBoard [
+    board findPattern: #(1 2 3).
+    self assert: ((board winner) = board noWinner).
+    board findPattern: #(4 5 6).
+    self assert: ((board winner) = board noWinner).
+    board findPattern: #(7 8 9).
+    self assert: ((board winner) = board noWinner).
+    board findPattern: #(1 5 9).
+    self assert: ((board winner) = board noWinner).
+    board findPattern: #(3 5 7).
+    self assert: ((board winner) = board noWinner).
+  ]
 ]

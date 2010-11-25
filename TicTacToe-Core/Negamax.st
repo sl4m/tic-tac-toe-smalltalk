@@ -39,23 +39,26 @@ Player subclass: Negamax [
   ]
 
   makeMove [
+    | newBoard |
     self ui displayNegamaxMoveMessage: self piece.
     self resetScores.
-    self negamax: (ThreeByThree create: (self board shallowCopy)) piece: self piece depth: 1.
+    newBoard := self board list shallowCopy.
+    self negamax: (ThreeByThree create: newBoard) piece: self piece depth: 1.
     ^self bestRandomMove.
   ]
 
   negamax: board piece: mark depth: level [
-    | bestScore opponent emptySquares score |
     (board isGameOver)
       ifTrue: [^self evaluatedScore: board piece: mark depth: level]
       ifFalse: [
+        | bestScore opp emptySquares |
         bestScore := -999.
-        opponent := self opponent: mark.
+        opp := self opponent: mark.
         emptySquares := board emptySquares.
         emptySquares do: [ :square |
+          | score |
           board move: square piece: mark.
-          score := (self negamax: board piece: opponent depth: level + 1) negate.
+          score := (self negamax: board piece: opp depth: level + 1) negated.
           board clear: square.
           (level = 1)
             ifTrue: [self scores at: square put: score].

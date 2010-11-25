@@ -113,6 +113,6 @@ Object subclass: Board [
   ]
   
   isGameOver [
-   ^((self someoneWinner | (self anyEmptySquares not)))
+    ^((self someoneWinner | (self anyEmptySquares not)))
   ]
 ]

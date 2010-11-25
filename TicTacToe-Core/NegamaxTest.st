@@ -129,5 +129,74 @@ TicTacToeTestCase subclass: NegamaxTestCase [
     self assert: (#(1 3 6) includes: (player bestRandomMove)).
   ]
 
+  testMaxMakesWinningMoveScenario1 [
+    board move: 1 piece: 'O'.
+    board move: 2 piece: 'X'.
+    board move: 3 piece: 'O'.
+    board move: 4 piece: 'X'.
 
+    player makeMove.
+    self assert: (#(5 9) = player bestScores).
+  ]
+
+  testMaxMakesWinningMoveScenario2 [
+    board move: 1 piece: 'X'.
+    board move: 2 piece: 'O'.
+    board move: 4 piece: 'X'.
+    board move: 5 piece: 'X'.
+    board move: 7 piece: 'O'.
+    board move: 8 piece: 'O'.
+
+    self assert: (player makeMove = 9).
+  ]
+
+  testMaxMakesWinningMoveScenario3 [
+    board move: 1 piece: 'O'.
+    board move: 2 piece: 'X'.
+    board move: 3 piece: 'O'.
+    board move: 4 piece: 'X'.
+    board move: 6 piece: 'X'.
+    board move: 8 piece: 'O'.
+
+    self assert: (player makeMove = 5).
+  ]
+
+  testMaxMakesWinningMoveScenario4 [
+    board move: 1 piece: 'O'.
+    board move: 2 piece: 'X'.
+    board move: 3 piece: 'O'.
+    board move: 4 piece: 'X'.
+    board move: 5 piece: 'O'.
+    board move: 6 piece: 'X'.
+    board move: 7 piece: 'X'.
+
+    self assert: (player makeMove = 9).
+  ]
+
+  testMaxMakesWinningMoveScenario5 [
+    board move: 1 piece: 'X'.
+    board move: 2 piece: 'O'.
+    board move: 3 piece: 'X'.
+    board move: 5 piece: 'O'.
+    board move: 9 piece: 'X'.
+
+    self assert: (player makeMove = 8).
+  ]
+
+  testMaxMakesBlockingMoveScenario1 [
+    board move: 1 piece: 'O'.
+    board move: 4 piece: 'X'.
+    board move: 5 piece: 'X'.
+
+    self assert: (player makeMove = 6).
+  ]
+
+  testMaxMakesBlockingMoveScenario2 [
+    board move: 1 piece: 'O'.
+    board move: 5 piece: 'X'.
+    board move: 9 piece: 'X'.
+
+    player makeMove.
+    self assert: (#(3 7) = player bestScores).
+  ]
 ]
