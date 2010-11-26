@@ -65,7 +65,7 @@ Object subclass: Console [
               cr;
               show: bar;
               cr;
-              show: space, (list at: 5) asString, vSpace, (list at: 5) asString, vSpace, (list at: 6) asString;
+              show: space, (list at: 4) asString, vSpace, (list at: 5) asString, vSpace, (list at: 6) asString;
               cr;
               show: bar;
               cr; 
