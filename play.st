@@ -1,6 +1,3 @@
-PackageLoader fileInPackage: #TicTacToe.
+PackageLoader fileInPackage: 'TicTacToe'.
 
-| ttt |
-
-ttt := TacToe-Core.TicTacToe new.
-ttt startEventLoop.
+TicTacToe.TicTacToe create startEventLoop.
