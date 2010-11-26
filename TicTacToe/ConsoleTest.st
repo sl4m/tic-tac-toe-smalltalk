@@ -71,12 +71,12 @@ MainTestCase subclass: ConsoleTestCase [
   ]
 
   testIsPlayingAgainOnNo [
-    fakeStdIn nextLine: $n.
+    fakeStdIn nextLine: 'n'.
     self assert: ((console isPlayingAgain) not).
   ]
 
   testIsPlayingAgainOnYes [
-    fakeStdIn nextLine: $y.
+    fakeStdIn nextLine: 'y'.
     self assert: (console isPlayingAgain).
   ]
 ]

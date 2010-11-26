@@ -48,7 +48,7 @@ Object subclass: TicTacToe [
         self createPlayers.
         game := Game create: ThreeByThree new ui: ui playerX: playerX playerO: playerO.
         game play.
-        playAgain := self ui isPlayingAgain.
+        playAgain := ui isPlayingAgain.
       ].
     self ui displayExitMessage.
   ]

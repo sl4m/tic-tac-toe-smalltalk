@@ -47,9 +47,9 @@ Object subclass: Console [
       whileTrue: [
         | input |
         input := self userInput.
-        (input = $y)
+        (input = 'y')
           ifTrue: [^true].
-        (input = $n)
+        (input = 'n')
           ifTrue: [^false].
         self displayTryAgain.
       ].
