@@ -38,7 +38,7 @@ Object subclass: Console [
 
   humanPlayerMove: piece [
     stdOutput cr;
-              show: 'Enter your move, player ', piece asString, ': '.
+              show: 'Enter your move (1-9), player ', piece asString, ': '.
     ^(self userInput asInteger)
   ]
 

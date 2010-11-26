@@ -15,9 +15,9 @@ If you have homebrew, installing GNU Smalltalk is as easy as executing <code>bre
 
 After building GNU Smalltalk, you'll need to package up the TicTacToe library.  I have provided a shell script that creates the package, runs the SUnit tests, and places the package in your <code>~/.st</code> directory.  The <code>~/.st</code> directory is one of several places GNU Smalltalk looks to find packages.  If the package built successfully, you should see the new directory in your home path and <code>TicTacToe.star</code>.  <code>\*.star</code> packages are nothing more than <code>\*.gz</code> files. 
 
-To execute the <code>run\_tests.sh</code> shell script (you may need the chmod it), type the following:   
+To execute the shell script (you may need the chmod it), type the following:   
 
-    ./run_tests.sh
+    ./build_package.sh
 
 ## Running the Game
 

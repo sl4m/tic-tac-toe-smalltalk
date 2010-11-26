@@ -28,7 +28,7 @@ MainTestCase subclass: ConsoleTestCase [
     move := '4'.
     fakeStdIn nextLine: move.
     self assert: ((console humanPlayerMove: 'X') = move asInteger).
-    self assert: (fakeStdOut message = 'Enter your move, player X: ').
+    self assert: (fakeStdOut message = 'Enter your move (1-9), player X: ').
   ]
 
   testDisplayBoardLayout [
