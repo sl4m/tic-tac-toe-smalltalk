@@ -38,12 +38,21 @@ Object subclass: Console [
 
   humanPlayerMove: piece [
     stdOutput cr;
-              show: 'Enter your move, player ', piece asString.
+              show: 'Enter your move, player ', piece asString, ': '.
     ^(self userInput asInteger)
   ]
 
-  playAgain [
-    ^self userInput
+  isPlayingAgain [
+    [true]
+      whileTrue: [
+        | input |
+        input := self userInput.
+        (input = $y)
+          ifTrue: [^true].
+        (input = $n)
+          ifTrue: [^false].
+        self displayTryAgain.
+      ].
   ]
 
   displayBoard: list [
@@ -60,16 +69,24 @@ Object subclass: Console [
               cr;
               show: bar;
               cr; 
-              show: space, (list at: 7) asString, vSpace, (list at: 8) asString, vSpace, (list at: 9) asString.
+              show: space, (list at: 7) asString, vSpace, (list at: 8) asString, vSpace, (list at: 9) asString;
+              cr.
   ]
 
   displayNegamaxMoveMessage: piece [
-    stdOutput show: 'Player ''', piece asString, ''' is making a move';
+    stdOutput cr;
+              show: 'Player ''', piece asString, ''' is making a move';
               cr.
   ]
 
   displayWinner: piece [
-    stdOutput show: 'The winner is ', piece asString, '!!!'.
+    stdOutput cr;
+              show: 'The winner is ', piece asString, '!!!'.
+  ]
+
+  displayDrawMessage [
+    stdOutput cr;
+              show: 'The game is a draw.'.
   ]
 
   displayTryAgain [
@@ -77,11 +94,9 @@ Object subclass: Console [
               show: 'Do you want to play again? (''y'' or ''n'') '.
   ]
 
-  displayDrawMessage [
-    stdOutput show: 'The game is a draw.'.
-  ]
-
   displayExitMessage [
-    stdOutput show: 'Thanks for playing!'.
+    stdOutput cr;
+              show: 'Thanks for playing!';
+              cr.
   ]
 ]

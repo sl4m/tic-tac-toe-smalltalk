@@ -40,17 +40,6 @@ Object subclass: TicTacToe [
       ].
   ]
 
-  isPlayingAgain [
-    | playAgain |
-    [true]
-      whileTrue: [
-        playAgain := self ui playAgain.
-        (playAgain = 'y' | playAgain = 'n')
-          ifTrue: [^(playAgain = 'y')].
-        self ui displayTryAgain.
-      ].
-  ]
-
   startEventLoop [
     | game playAgain |
     playAgain := true.
@@ -59,7 +48,7 @@ Object subclass: TicTacToe [
         self createPlayers.
         game := Game create: ThreeByThree new ui: ui playerX: playerX playerO: playerO.
         game play.
-        playAgain := self isPlayingAgain.
+        playAgain := self ui isPlayingAgain.
       ].
     self ui displayExitMessage.
   ]

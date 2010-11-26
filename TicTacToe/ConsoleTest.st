@@ -28,14 +28,7 @@ MainTestCase subclass: ConsoleTestCase [
     move := '4'.
     fakeStdIn nextLine: move.
     self assert: ((console humanPlayerMove: 'X') = move asInteger).
-    self assert: (fakeStdOut message = 'Enter your move, player X').
-  ]
-
-  testTryAgainInputFromUser [
-    | yes |
-    yes := 'y'.
-    fakeStdIn nextLine: yes.
-    self assert: ((console playAgain) = yes).
+    self assert: (fakeStdOut message = 'Enter your move, player X: ').
   ]
 
   testDisplayBoardLayout [
@@ -75,5 +68,15 @@ MainTestCase subclass: ConsoleTestCase [
   testDisplayExitMessage [
     console displayExitMessage.
     self assert: (fakeStdOut message = 'Thanks for playing!').
+  ]
+
+  testIsPlayingAgainOnNo [
+    fakeStdIn nextLine: $n.
+    self assert: ((console isPlayingAgain) not).
+  ]
+
+  testIsPlayingAgainOnYes [
+    fakeStdIn nextLine: $y.
+    self assert: (console isPlayingAgain).
   ]
 ]
