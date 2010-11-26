@@ -1,9 +1,9 @@
 <package>
-  <name>TicTacToe-Core</name>
-  <namespace>TicTacToe.Core</namespace>
+  <name>TicTacToe</name>
+  <namespace>TicTacToe</namespace>
   <test>
-    <sunit> TicTacToe.Core.TTTTestCase*</sunit>
-    <filein>TTTTest.st</filein> 
+    <sunit> TicTacToe.MainTestCase*</sunit>
+    <filein>MainTest.st</filein> 
     <filein>BoardTest.st</filein>
     <filein>ConsoleTest.st</filein>
     <filein>GameTest.st</filein>
@@ -11,7 +11,7 @@
     <filein>HumanTest.st</filein>
     <filein>NegamaxTest.st</filein>
     <filein>ThreeByThreeTest.st</filein>
-    <filein>TicTacToeTest.st</filein>
+    <filein>TTTTest.st</filein>
   </test>
   <filein>FakeStdIn.st</filein>
   <filein>FakeStdOut.st</filein>
@@ -22,7 +22,7 @@
   <filein>Human.st</filein>
   <filein>Negamax.st</filein>
   <filein>ThreeByThree.st</filein>
-  <filein>TicTacToe.st</filein>
+  <filein>TTT.st</filein>
   <file>FakeStdIn.st</file>
   <file>FakeStdOut.st</file>
   <file>Board.st</file>
@@ -32,8 +32,8 @@
   <file>Human.st</file>
   <file>Negamax.st</file>
   <file>ThreeByThree.st</file>
-  <file>TicTacToe.st</file>
-  <file>TTTTest.st</file>
+  <file>TTT.st</file>
+  <file>MainTest.st</file>
   <file>BoardTest.st</file>
   <file>ConsoleTest.st</file>
   <file>GameTest.st</file>
@@ -41,5 +41,5 @@
   <file>HumanTest.st</file>
   <file>NegamaxTest.st</file>
   <file>ThreeByThreeTest.st</file>
-  <file>TicTacToeTest.st</file>
+  <file>TTTTest.st</file>
 </package>

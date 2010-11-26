@@ -1,2 +1,0 @@
-TTTTestCase subclass: TicTacToeTestCase [
-]

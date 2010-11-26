@@ -1,4 +1,4 @@
-TTTTestCase subclass: ThreeByThreeTestCase [
+MainTestCase subclass: ThreeByThreeTestCase [
   | board expectedWinningPatterns |
 
   setUp [

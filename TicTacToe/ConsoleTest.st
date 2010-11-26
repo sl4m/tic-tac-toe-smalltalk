@@ -1,4 +1,4 @@
-TTTTestCase subclass: ConsoleTestCase [
+MainTestCase subclass: ConsoleTestCase [
   | console fakeStdIn fakeStdOut |
   setUp [
     fakeStdIn := FakeStdIn new.

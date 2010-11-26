@@ -1,4 +1,4 @@
-TTTTestCase subclass: GameTestCase [
+MainTestCase subclass: GameTestCase [
   | board human negamax game console fakeStdIn fakeStdOut |
   setUp [
     fakeStdIn := FakeStdIn new.

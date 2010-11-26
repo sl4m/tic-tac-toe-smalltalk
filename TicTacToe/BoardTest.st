@@ -1,7 +1,7 @@
 Board subclass: FakeBoard [
 ]
 
-TTTTestCase subclass: BoardTestCase [
+MainTestCase subclass: BoardTestCase [
   | board |
 
   setUp [

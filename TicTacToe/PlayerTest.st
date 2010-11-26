@@ -1,4 +1,4 @@
-TTTTestCase subclass: PlayerTestCase [
+MainTestCase subclass: PlayerTestCase [
   testCreateHumanPlayer [
     | player |
     player := Player create: 'Human' piece: 'X'.
