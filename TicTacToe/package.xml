@@ -4,6 +4,8 @@
   <test>
     <sunit> TicTacToe.MainTestCase*</sunit>
     <filein>MainTest.st</filein> 
+    <filein>FakeStdIn.st</filein>
+    <filein>FakeStdOut.st</filein>
     <filein>BoardTest.st</filein>
     <filein>ConsoleTest.st</filein>
     <filein>GameTest.st</filein>
@@ -13,8 +15,6 @@
     <filein>ThreeByThreeTest.st</filein>
     <filein>TicTacToeTest.st</filein>
   </test>
-  <filein>FakeStdIn.st</filein>
-  <filein>FakeStdOut.st</filein>
   <filein>Board.st</filein>
   <filein>Console.st</filein>
   <filein>Game.st</filein>
