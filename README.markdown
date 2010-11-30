@@ -17,7 +17,7 @@ After building GNU Smalltalk, you'll need to package up the TicTacToe library.  
 
 To execute the shell script, type the following:   
 
-    ./build_package.sh
+    ./build
 
 ## Running the Game
 
