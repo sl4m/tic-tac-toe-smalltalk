@@ -1,6 +1,14 @@
 Object subclass: Board [
   | winningPatterns list winner |
 
+  Board class >> new [
+    ^super new initialize
+  ]
+
+  initialize [
+    self resetWinner.
+  ]
+
   findPattern [
     self subclassResponsibility
   ]
