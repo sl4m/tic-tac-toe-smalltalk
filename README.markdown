@@ -6,8 +6,7 @@
 
 ## Requirements
 
-* GNU Smalltalk (used 3.2.2)
-* homebrew (optional)
+* GNU Smalltalk version 3.2.2
 
 ## Easy Setup
 
