@@ -6,7 +6,8 @@ Object subclass: Game [
           board: newBoard;
           ui: newUi;
           playerX: newPlayerX board: newBoard ui: newUi;
-          playerO: newPlayerO board: newBoard ui: newUi
+          playerO: newPlayerO board: newBoard ui: newUi;
+          yourself
   ]
 
   board [

@@ -3,7 +3,8 @@ Object subclass: TicTacToe [
 
   TicTacToe class >> create [
     ^self new
-          ui: Console new
+          ui: Console new;
+          yourself
   ]
 
   ui: newUi [
