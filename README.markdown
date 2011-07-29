@@ -6,7 +6,7 @@
 
 ## Requirements
 
-* Mac OS X (may work in Linux, full support for Linux/Windows soon)
+* Mac OS X (should work on Linux/Windows)
 * GNU Smalltalk version 3.2.2
 
 ## Easy Setup (for Mac OS X)
