@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "\nBuilding TicTacToe package...\n"
-gst-package -t ~/.st TicTacToe/package.xml
-echo "\nRunning TicTacToe tests...\n"
+echo "\nBuilding TicTacToe package..."
+gst-package -t ~/.st TicTacToe/package.xml > /dev/null
+echo "Running TicTacToe tests...\n"
 gst-sunit -p TicTacToe
