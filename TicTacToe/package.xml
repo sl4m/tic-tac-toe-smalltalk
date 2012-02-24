@@ -3,7 +3,7 @@
   <namespace>TicTacToe</namespace>
   <test>
     <sunit> TicTacToe.MainTestCase*</sunit>
-    <filein>MainTest.st</filein> 
+    <filein>MainTest.st</filein>
     <filein>FakeStdIn.st</filein>
     <filein>FakeStdOut.st</filein>
     <filein>BoardTest.st</filein>

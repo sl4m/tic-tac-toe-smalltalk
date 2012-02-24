@@ -36,7 +36,7 @@ MainTestCase subclass: BoardTestCase [
   ]
 
   testRowSize [
-    self assert: (board rowSize = 3). 
+    self assert: (board rowSize = 3).
   ]
 
   testList [

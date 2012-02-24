@@ -6,7 +6,7 @@ Object subclass: FakeStdOut [
   ]
 
   cr []
-  
+
   show: newMessage [
     (message isNil)
       ifTrue: [message := ''].

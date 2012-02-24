@@ -82,7 +82,7 @@ Player subclass: Negamax [
     indexes := Array new: (self highestScoreCount).
     counter := 1.
 
-    1 to: self scores size do: [ :index | 
+    1 to: self scores size do: [ :index |
       ((self scores at: index) = max)
       ifTrue: [
         indexes at: counter put: index.

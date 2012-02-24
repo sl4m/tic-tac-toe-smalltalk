@@ -48,7 +48,7 @@ Object subclass: Game [
 
   moveFrom: player [
     | move |
-    [true] 
+    [true]
       whileTrue: [
         move := player makeMove.
         (board isValidMove: move)

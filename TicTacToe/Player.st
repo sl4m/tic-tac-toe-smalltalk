@@ -25,7 +25,7 @@ Object subclass: Player [
   ]
 
   board [
-    ^board 
+    ^board
   ]
 
   board: newBoard [
@@ -41,6 +41,6 @@ Object subclass: Player [
   ]
 
   makeMove [
-    self subclassResponsibility 
+    self subclassResponsibility
   ]
 ]

@@ -55,7 +55,7 @@ MainTestCase subclass: NegamaxTestCase [
     board move: 1 piece: 'O'.
     board move: 2 piece: 'O'.
     board move: 3 piece: 'O'.
-    
+
     self assert: ((player evaluatedScore: board piece: 'X' depth: 3) = -1).
   ]
 
@@ -63,7 +63,7 @@ MainTestCase subclass: NegamaxTestCase [
     board move: 1 piece: 'O'.
     board move: 2 piece: 'O'.
     board move: 3 piece: 'O'.
-    
+
     self assert: ((player evaluatedScore: board piece: 'X' depth: 2) = -2).
   ]
 
@@ -79,7 +79,7 @@ MainTestCase subclass: NegamaxTestCase [
     board move: 1 piece: 'X'.
     board move: 2 piece: 'X'.
     board move: 3 piece: 'X'.
-    
+
     self assert: ((player evaluatedScore: board piece: 'X' depth: 2) = 2).
   ]
 
@@ -114,7 +114,7 @@ MainTestCase subclass: NegamaxTestCase [
 
   testBestMoves [
     | scores |
-    scores := {2 . 1 . 0 . 1 . 2 . 1 . 2 . 0 . 1}.    
+    scores := {2 . 1 . 0 . 1 . 2 . 1 . 2 . 0 . 1}.
     player scores: scores.
     self assert: (player bestMoves = #(1 5 7)).
   ]

@@ -57,7 +57,7 @@ Object subclass: Console [
 
   displayBoard: list [
     | bar space vSpace |
-    bar := '---+---+---'. 
+    bar := '---+---+---'.
     space := ' '.
     vSpace := ' | '.
     stdOutput cr;
@@ -68,7 +68,7 @@ Object subclass: Console [
               show: space, (list at: 4) asString, vSpace, (list at: 5) asString, vSpace, (list at: 6) asString;
               cr;
               show: bar;
-              cr; 
+              cr;
               show: space, (list at: 7) asString, vSpace, (list at: 8) asString, vSpace, (list at: 9) asString;
               cr.
   ]
